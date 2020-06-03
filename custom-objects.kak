@@ -28,14 +28,14 @@ define-command obj_prompt -params 1 %{
 define-command -hidden inner            %{ obj_prompt "<a-i>" }
 define-command -hidden inner_start      %{ obj_prompt "<a-[>" }
 define-command -hidden inner_end        %{ obj_prompt "<a-]>" }
-define-command -hidden inner_start_ext  %{ obj_prompt "<a-{>" }
-define-command -hidden inner_end_ext    %{ obj_prompt "<a-}>" }
+define-command -hidden inner_start_ext  %< obj_prompt "<a-{>" >
+define-command -hidden inner_end_ext    %< obj_prompt "<a-}>" >
 
 define-command -hidden around           %{ obj_prompt "<a-a>" }
 define-command -hidden around_start     %{ obj_prompt "["     }
 define-command -hidden around_end       %{ obj_prompt "]"     }
-define-command -hidden around_start_ext %{ obj_prompt "{"     }
-define-command -hidden around_end_ext   %{ obj_prompt "}"     }
+define-command -hidden around_start_ext %< obj_prompt "{"     >
+define-command -hidden around_end_ext   %< obj_prompt "}"     >
 
 map global normal <a-i> ": inner<ret>"
 map global normal <a-[> ": inner_start<ret>"
