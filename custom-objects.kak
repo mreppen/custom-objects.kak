@@ -17,11 +17,12 @@ define-command obj_prompt -params 1 %{
       do
         if [ ${kv#$kak_key} != ${kv} ]
         then
-          echo "exec c${kv#$kak_key=}<ret>"
+          echo "exec \"c${kv#$kak_key=}<ret>\""
           exit 0
         fi
       done
-      echo "exec $kak_key"
+      if [ "$kak_key" = '"' ]; then kak_key='""'; fi
+      echo "exec \"$kak_key\""
     }
   }
 }
