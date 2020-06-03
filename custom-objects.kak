@@ -13,10 +13,8 @@ define-command add-custom-object -params 3..4 -docstring "add-custom-object <sco
 define-command obj_prompt -params 1 %{
   exec "%arg{1}"
   on-key %{ eval %sh{
-      echo "echo -debug $kak_opt_custom_objects"
       for kv in $kak_opt_custom_objects
       do
-        echo "echo -debug ${kv#$kak_key}"
         if [ ${kv#$kak_key} != ${kv} ]
         then
           echo "exec c${kv#$kak_key=}<ret>"
