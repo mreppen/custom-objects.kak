@@ -24,6 +24,6 @@ add-custom-oject buffer "#" "\Q%opt{comment_block_begin}\E,\Q%opt{comment_block_
 ## Restrictions
 The object definition does not allow `=` or spaces.
 
-# Related projects
+## Related projects
 - [kakoune-text-objects](https://github.com/Delapouite/kakoune-text-objects)
 - [surround.kak](https://github.com/alexherbo2/surround.kak)

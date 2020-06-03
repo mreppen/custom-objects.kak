@@ -6,9 +6,9 @@ define-command add-custom-object -params 3..4 -docstring "add-custom-object <sco
 }
 
 # Suggested pair:
-hook global BufSetOption filetype=.* %{
-  add-custom-object buffer "#" "\Q%opt{comment_block_begin}\E,\Q%opt{comment_block_end}\E" "comment"
-}
+#hook global BufSetOption filetype=.* %{
+#  add-custom-object buffer "#" "\Q%opt{comment_block_begin}\E,\Q%opt{comment_block_end}\E" "comment"
+#}
 
 define-command obj_prompt -params 1 %{
   exec "%arg{1}"
