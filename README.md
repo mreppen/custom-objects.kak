@@ -22,7 +22,9 @@ add-custom-oject buffer "#" "\Q%opt{comment_block_begin}\E,\Q%opt{comment_block_
 ```
 
 ## Restrictions
-The object definition does not allow `=` or spaces.
+ - The object definition does not allow `=` or spaces.
+ - Any `<` or `>` characters must be replaced by `<lt>` and `<gt>` respectively.
+
 
 ## Related projects
 - [kakoune-text-objects](https://github.com/Delapouite/kakoune-text-objects)
